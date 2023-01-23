@@ -4,8 +4,7 @@ module.exports = {
         builder: "@storybook/builder-webpack5",
     },
     stories: [
-        "../packages/**/src/stories/*.stories.@(js|jsx|ts|tsx)",
-        "../packages/**/src/stories/*.stories.mdx",
+        "../packages/**/stories/*.stories.@(js|jsx|ts|tsx)"
     ],
     addons: [
         {

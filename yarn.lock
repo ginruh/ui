@@ -1781,7 +1781,6 @@ __metadata:
     "@babel/core": ^7.20.12
     "@eslint/create-config": ^0.4.2
     "@eslint/eslintrc": ^1.4.1
-    "@mdx-js/react": 1.6.22
     "@storybook/addon-actions": ^6.5.15
     "@storybook/addon-docs": ^6.5.15
     "@storybook/addon-essentials": ^6.5.15
@@ -2201,7 +2200,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdx-js/react@npm:1.6.22, @mdx-js/react@npm:^1.6.22":
+"@mdx-js/react@npm:^1.6.22":
   version: 1.6.22
   resolution: "@mdx-js/react@npm:1.6.22"
   peerDependencies:
@@ -4366,9 +4365,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/components@workspace:packages/components"
   dependencies:
-    "@mdx-js/react": 1.6.22
-    "@storybook/addon-docs": ^6.5.15
-    "@storybook/react": ^6.5.15
     "@types/react": ^18.0.27
     react: ^18.2.0
   languageName: unknown
@@ -4377,6 +4373,9 @@ __metadata:
 "@ui/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@ui/core@workspace:packages/core"
+  dependencies:
+    "@types/react": ^18.0.27
+    react: ^18.2.0
   languageName: unknown
   linkType: soft
 
