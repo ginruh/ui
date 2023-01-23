@@ -1,5 +1,11 @@
-## @iyorozuya/ui
+## @iyorozuya/ui - WIP
 
-WIP
+### Introduction
+A UI design system built using tailwind for React
 
-License: MIT
+### Features
+- Opinionated set of UI components
+- Built with Typescript
+
+### License
+MIT
