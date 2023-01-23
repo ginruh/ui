@@ -8,6 +8,7 @@
         "skipLibCheck": true,
         "sourceMap": true,
         "moduleResolution": "node",
+        "jsx": "preserve",
         "paths": {
             "@ui/core": ["./packages/core"],
             "@ui/components": ["./packages/components"]

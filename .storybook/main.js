@@ -1,11 +1,11 @@
 module.exports = {
-    // features: {
-    //     previewMdx2: true,
-    // },
+    core: {
+        disableTelemetry: true,
+        builder: "@storybook/builder-webpack5",
+    },
     stories: [
-        "../src/stories/**/*.stories.mdx",
-        "../packages/**/*.stories.mdx",
-        "../packages/**/*.stories.@(js|jsx|ts|tsx)",
+        "../packages/**/src/stories/*.stories.@(js|jsx|ts|tsx)",
+        "../packages/**/src/stories/*.stories.mdx",
     ],
     addons: [
         "@storybook/addon-links",
