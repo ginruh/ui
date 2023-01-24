@@ -1,12 +1,18 @@
+import { cva } from 'class-variance-authority'
+import { ReactElement } from 'react'
+
 interface ButtonProps {
     text: string
     primary?: boolean
 }
 
-export const Button = ({
-    primary = true,
-    text
-}: ButtonProps): React.ReactElement => {
+const styles = cva([], {
+    variants: {
+        color: {}
+    }
+})
+
+export const Button = ({ primary = true, text }: ButtonProps): ReactElement => {
     return (
         <button
             className={`${
