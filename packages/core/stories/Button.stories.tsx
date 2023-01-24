@@ -7,10 +7,12 @@ export default {
 
 // Primary button
 export const Primary = (): React.ReactElement => (
-    <Button text="Primary button" primary />
+    <Button>Primary button</Button>
 )
 
 // Secondary button
 export const Secondary = (): React.ReactElement => (
-    <Button text="Secondary button" primary={false} />
+    <Button color={'secondary'}>
+      Secondary button
+    </Button>
 )

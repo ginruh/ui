@@ -1,27 +1,47 @@
 import { cva } from 'class-variance-authority'
-import { ReactElement } from 'react'
+import { ReactElement, ReactNode } from 'react'
 
-interface ButtonProps {
-    text: string
-    primary?: boolean
+interface Props {
+    children: ReactNode
+    color?: 'primary' | 'secondary' | 'info' | 'danger'
+    variant?: 'button' | 'link' | 'text'
+    size?: 'small' | 'medium' | 'large'
 }
 
-const styles = cva([], {
+const styles = cva(['rounded-md'], {
     variants: {
-        color: {}
+        color: {
+            primary: 'bg-blue-500 hover:bg-blue-600 text-white shadow-md',
+            secondary: 'bg-gray-100 hover:bg-gray-200 text-gray-800',
+            info: [],
+            danger: []
+        },
+        variant: {
+            button: [],
+            link: [],
+            text: []
+        },
+        size: {
+            small: ['px-2 py-1'],
+            medium: ['px-3 py-2'],
+            large: ['px-4 py-3']
+        }
     }
 })
 
-export const Button = ({ primary = true, text }: ButtonProps): ReactElement => {
+export const Button = ({
+    color = 'primary',
+    variant = 'button',
+    size = 'medium',
+    children
+}: Props): ReactElement => {
     return (
-        <button
-            className={`${
-                primary
-                    ? 'bg-blue-500 hover:bg-blue-600 text-white shadow-md'
-                    : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
-            } rounded-md px-4 py-2`}
-        >
-            {text}
+        <button className={styles({
+            color,
+            variant,
+            size
+        })}>
+            {children}
         </button>
     )
 }
