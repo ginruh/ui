@@ -2,8 +2,8 @@
   "name": "@ui/core",
   "packageManager": "yarn@3.3.1",
   "dependencies": {
-    "class-variance-authority": "^0.4.0",
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
     "@types/react": "^18.0.27"
